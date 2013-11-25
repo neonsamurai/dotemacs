@@ -12,14 +12,15 @@
 (require 'init-util)
 (require 'init-core)
 (require 'init-eyecandy)
+(require 'init-powerline)
 
 (require 'init-editor)
+(require 'init-fill-column-indicator)
 (require 'init-smartparens)
-;; (require 'init-autopair)
 
 (require 'init-yasnippet)
 (require 'init-auto-complete)
-;; (require 'init-company)
+(require 'init-jedi)
 
 (require 'init-projectile)
 (require 'init-helm)
@@ -36,3 +37,5 @@
 (require 'init-evil)
 (require 'init-misc)
 (require 'init-bindings)
+
+

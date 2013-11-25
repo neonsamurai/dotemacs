@@ -2,7 +2,7 @@
 (require 'smart-mode-line)
 (setq sml/theme 'dark)
 (sml/setup)
-
+(setq molokai-theme-kit t)
 
 (require-package 'pretty-mode)
 (setq pretty-default-groups '(:function))
