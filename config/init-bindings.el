@@ -4,30 +4,31 @@
      (interactive)
      ,@commands))
 
-
+; Guide key displays available keybindings after entering the configured key
+; sequence. Link: https://github.com/kbkbkbkb1/guide-key
 (require-package 'guide-key)
 (require 'guide-key)
 (setq guide-key/guide-key-sequence '("C-x" "C-c"))
 (setq guide-key/recursive-key-sequence-flag t)
 (guide-key-mode 1)
 
-
+; smex is an improvement to IDO mode. Keybindings for activating smex completion
 (after 'smex
   (global-set-key (kbd "M-x") 'smex)
   (global-set-key (kbd "C-x C-m") 'smex)
   (global-set-key (kbd "C-c C-m") 'smex))
 
-
+; Add keychord to leave insert mode in evil mode. No more ESC smashing :)
 (after 'evil
   (require-package 'key-chord)
   (key-chord-mode 1)
-  (key-chord-define evil-insert-state-map "jk" 'evil-normal-state)
-  (key-chord-define evil-insert-state-map "kj" 'evil-normal-state)
+  (key-chord-define evil-insert-state-map ",." 'evil-normal-state)
+  (key-chord-define evil-insert-state-map ".," 'evil-normal-state)
 
-  (after 'ace-jump
+; Define keychords for entering jump modes similar to vim easymotion.
     (key-chord-define evil-normal-state-map "jw" 'ace-jump-word-mode)
     (key-chord-define evil-normal-state-map "jc" 'ace-jump-char-mode)
-    (key-chord-define evil-normal-state-map "jl" 'ace-jump-line-mode))
+    (key-chord-define evil-normal-state-map "jl" 'ace-jump-line-mode)
 
   (after 'evil-leader
     (evil-leader/set-leader ",")

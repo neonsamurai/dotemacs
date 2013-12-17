@@ -58,7 +58,8 @@
 
 ;; dired
 (require 'dired-x)
-
+(require 'dired-details+)
+(setq dired-details-hidden-string '"")
 
 ;; ediff
 (setq ediff-split-window-function 'split-window-horizontally)

@@ -6,12 +6,12 @@ This is my Emacs configuration. It is forked from the excellent config of
 editing scheme of Vim. If you are interested in Vim-like editing look at this
 [reference card](http://www.cmrr.umn.edu/~strupp/vim-3.0.refcard.html).
 
-I included a bunch of packages to give Emacs saner default funcionality and to
+I included a bunch of packages to give Emacs saner default functionality and to
 help me developing in various languages and frameworks. These are listed below,
-along with brief explanations on which does what.
+along with brief explanations on which does what and which packges are involved.
 
-Install
-=======
+Installation
+============
 Just clone the repository to your `~/.emacs.d/` directory, fire up Emacs and
 wait for the package managers to resolve and compile all the dependencies.
 

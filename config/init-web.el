@@ -24,7 +24,11 @@
 (require-package 'coffee-mode)
 (require-package 'jade-mode)
 (require-package 'stylus-mode)
-
+(require-package 'handlebars-mode)
+(require 'handlebars-mode)
+(after 'handlebars-mode
+  (add-to-list 'auto-mode-alist '("\\.hbs.html\\'" . handlebars-mode))
+)
 
 ;; (require-package 'skewer-mode)
 ;; (skewer-setup)

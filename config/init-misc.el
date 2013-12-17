@@ -1,8 +1,9 @@
+; Set silversearcher-ag options
 (setq ag-highlight-search t)
 (require-package 'ag)
 (add-hook 'ag-mode-hook (lambda () (toggle-truncate-lines t)))
 
-
+; Set project explorer options.
 (require-package 'project-explorer)
 (require 'project-explorer)
 (setq pe/omit-regex (concat pe/omit-regex "\\|^node_modules$"))
